@@ -6,4 +6,7 @@
 <div [ngStyle]="currentStyle">Hello world</div>
 <div [ngClass]="currentClass"></div>
 
+<div *ngIf="isChange">structuring directive</div>
+<button (click)="isChange = !isChange">Toggle</button>
+
 <code [style.color]="'green'">{{ txtInfo.value }}</code>
