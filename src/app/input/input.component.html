@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="name" #txtInfo>
+<h3 [style.background-color]="'yellow'">Your text is: {{ name }}</h3>
+<div [class]="isChange ? 'square' : 'circle'"></div>
+<div [class.circle]="isChange"></div>
+
+<code [style.color]="'green'">{{ txtInfo.value }}</code>
