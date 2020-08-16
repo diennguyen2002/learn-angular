@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class InputComponent implements OnInit {
   name: string = '';
   isChange: boolean = true;
+  currentStyle = {color: 'red', backgroundColor:'yellow'};
+  currentClass = {circle: this.isChange, square: !this.isChange};
   constructor() { }
 
   ngOnInit(): void {
   }
-
-
 
 }

@@ -3,4 +3,7 @@
 <div [class]="isChange ? 'square' : 'circle'"></div>
 <div [class.circle]="isChange"></div>
 
+<div [ngStyle]="currentStyle">Hello world</div>
+<div [ngClass]="currentClass"></div>
+
 <code [style.color]="'green'">{{ txtInfo.value }}</code>
