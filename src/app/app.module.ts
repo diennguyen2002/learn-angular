@@ -11,6 +11,7 @@ import { BookComponent } from './book/book.component';
 import { InputComponent } from './input/input.component';
 import { DictionaryComponent } from './dictionary/dictionary.component';
 import { PersonComponent } from './person/person.component';
+import { PersonListComponent } from './person-list/person-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PersonComponent } from './person/person.component';
     BookComponent,
     InputComponent,
     DictionaryComponent,
-    PersonComponent
+    PersonComponent,
+    PersonListComponent
   ],
   imports: [
     BrowserModule,
