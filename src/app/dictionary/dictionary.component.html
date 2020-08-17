@@ -7,8 +7,17 @@
 </div>
 <button (click)="isShowForm=true" *ngIf="!isShowForm">Thêm từ mới</button>
 <hr>
-<div *ngFor="let word of words" class="word">
-    <h3 [ngStyle]="{color: word.memorized ? 'green': 'red'}">{{ word.en }}</h3>
-    <h5>{{ word.vn }}</h5>
-    <button (click)="deleteWord(word.id)">Xóa</button>
+<br>
+<select [(ngModel)]="filterStatus">
+    <option value="ALL">Tất cả</option>
+    <option value="MEMORIZED">Đã nhớ</option>
+    <option value="FORGOT">Chưa nhớ</option>
+</select>
+<br>
+<div *ngFor="let word of words" >
+    <div class="word" *ngIf="doFilter(word)">
+        <h3 [ngStyle]="{color: word.memorized ? 'green': 'red'}">{{ word.en }}</h3>
+        <h5>{{ word.vn }}</h5>
+        <button (click)="deleteWord(word.id)">Xóa</button>
+    </div>
 </div>

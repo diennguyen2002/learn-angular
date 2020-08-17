@@ -15,6 +15,7 @@ export class DictionaryComponent implements OnInit {
   newEn = '';
   newVn = '';
   isShowForm = false;
+  filterStatus = 'ALL';
   
   constructor() { }
   
@@ -38,7 +39,16 @@ export class DictionaryComponent implements OnInit {
       return element.id === id;
     });
     this.words.splice(index,1);
-    
+  }
+
+  doFilter(word){
+    if(this.filterStatus === 'ALL' || 
+       (this.filterStatus === 'MEMORIZED' && word.memorized) ||
+       (this.filterStatus === 'FORGOT' && !word.memorized)
+    ){
+      return true;
+    }
+    return false;
   }
 
 }
