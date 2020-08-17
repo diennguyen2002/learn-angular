@@ -9,4 +9,11 @@
 <div *ngIf="isChange">structuring directive</div>
 <button (click)="isChange = !isChange">Toggle</button>
 
+<ul>
+    <li *ngFor="let subj of arrSubjects">
+        {{ subj }}
+    </li>
+</ul>
+
+
 <code [style.color]="'green'">{{ txtInfo.value }}</code>

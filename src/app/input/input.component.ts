@@ -10,6 +10,7 @@ export class InputComponent implements OnInit {
   isChange: boolean = true;
   currentStyle = {color: 'red', backgroundColor:'yellow'};
   currentClass = {circle: this.isChange, square: !this.isChange};
+  arrSubjects:string[] = ['Angular', 'React', 'Nodejs'];
   constructor() { }
 
   ngOnInit(): void {
