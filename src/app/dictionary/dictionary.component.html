@@ -1,0 +1,14 @@
+<div *ngIf="isShowForm">
+    <input type="text" placeholder="English" [(ngModel)]="newEn">
+    <br>
+    <input type="text" placeholder="Vietnamese" [(ngModel)]="newVn">
+    <br><br>
+    <button (click)="addWord()">Thêm từ mới</button>
+</div>
+<button (click)="isShowForm=true" *ngIf="!isShowForm">Thêm từ mới</button>
+<hr>
+<div *ngFor="let word of words" class="word">
+    <h3 [ngStyle]="{color: word.memorized ? 'green': 'red'}">{{ word.en }}</h3>
+    <h5>{{ word.vn }}</h5>
+    <button (click)="deleteWord(word.id)">Xóa</button>
+</div>

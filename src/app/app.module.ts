@@ -9,6 +9,7 @@ import { BaihatComponent } from './components/baihat/baihat.component';
 import { Baitapbuoi3Component } from './components/baitapbuoi3/baitapbuoi3.component';
 import { BookComponent } from './book/book.component';
 import { InputComponent } from './input/input.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InputComponent } from './input/input.component';
     BaihatComponent,
     Baitapbuoi3Component,
     BookComponent,
-    InputComponent
+    InputComponent,
+    DictionaryComponent
   ],
   imports: [
     BrowserModule,
