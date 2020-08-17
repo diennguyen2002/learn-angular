@@ -10,6 +10,7 @@ import { Baitapbuoi3Component } from './components/baitapbuoi3/baitapbuoi3.compo
 import { BookComponent } from './book/book.component';
 import { InputComponent } from './input/input.component';
 import { DictionaryComponent } from './dictionary/dictionary.component';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DictionaryComponent } from './dictionary/dictionary.component';
     Baitapbuoi3Component,
     BookComponent,
     InputComponent,
-    DictionaryComponent
+    DictionaryComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,

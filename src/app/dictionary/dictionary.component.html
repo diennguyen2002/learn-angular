@@ -19,5 +19,8 @@
         <h3 [ngStyle]="{color: word.memorized ? 'green': 'red'}">{{ word.en }}</h3>
         <h5>{{ word.vn }}</h5>
         <button (click)="deleteWord(word.id)">Xóa</button>
+        <button (click)="word.memorized = !word.memorized">
+            {{ word.memorized ? 'Chưa nhớ' : 'Đã nhớ' }}
+        </button>
     </div>
 </div>
