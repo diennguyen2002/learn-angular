@@ -15,6 +15,7 @@ import { PersonListComponent } from './person-list/person-list.component';
 import { ParentComponent } from './parent.component';
 import { ChildComponent } from './child.component';
 import { CardComponent } from './card/card.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CardComponent } from './card/card.component';
     PersonListComponent,
     ParentComponent,
     ChildComponent,
-    CardComponent
+    CardComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
