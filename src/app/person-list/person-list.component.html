@@ -1,3 +1,7 @@
 <ng-container *ngFor="let person of listPersons">
-    <app-person [name]="person.name" [age]="person.age"></app-person>
+    <app-person 
+        [name]="person.name" 
+        [age]="person.age"
+        (clickRemovePerson)="removePerson($event)">
+    </app-person>
 </ng-container>
