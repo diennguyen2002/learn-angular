@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { ChildComponent } from './child.component';
 import { CardComponent } from './card/card.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { RoundPipe } from './round.pipe';
+import { IpComponent } from './ip/ip.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { RoundPipe } from './round.pipe';
     ChildComponent,
     CardComponent,
     PipeComponent,
-    RoundPipe
+    RoundPipe,
+    IpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
