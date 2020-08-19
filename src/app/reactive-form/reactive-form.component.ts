@@ -11,7 +11,12 @@ export class ReactiveFormComponent implements OnInit {
   constructor() { 
     this.frmGroup = new FormGroup({
       email: new FormControl(),
-      password: new FormControl()
+      password: new FormControl(),
+      subjects: new FormGroup({
+        nodejs: new FormControl(),
+        angular: new FormControl(),
+        reactjs: new FormControl()
+      })
     });
   }
 
@@ -19,11 +24,7 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   onSubmit(){
-    //console.log(this.frmGroup.value);
-    // this.frmGroup.setValue({
-    //   email: 'Nancy@yahoo.com',
-    //   password: '123'
-    // });
+    console.log(this.frmGroup.value);
   }
 
 }
