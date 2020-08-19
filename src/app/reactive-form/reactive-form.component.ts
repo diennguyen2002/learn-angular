@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from "@angular/forms"
+import { FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms"
 
 @Component({
   selector: 'app-reactive-form',
@@ -13,7 +13,7 @@ export class ReactiveFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.frmGroup = this.fb.group({
-      email: '',
+      email: ['', [Validators.required, Validators.email, gmailValidator]],
       password: '',
       subjects: this.fb.group({
         nodejs: false,
@@ -26,5 +26,11 @@ export class ReactiveFormComponent implements OnInit {
   onSubmit() {
     console.log(this.frmGroup.value);
   }
+}
 
+function gmailValidator(formControl: FormControl){
+  if(formControl.value.includes('gmail.com')){
+    return null;
+  }
+  return {gmail: true};
 }

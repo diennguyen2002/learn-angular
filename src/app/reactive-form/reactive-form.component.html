@@ -1,5 +1,7 @@
 <form (ngSubmit)="onSubmit()" [formGroup]="frmGroup">
     <input type="text" placeholder="email" #txtEmail formControlName="email">
+    <div *ngIf="frmGroup.get('email').errors?.required && frmGroup.get('email').touched">Email is required</div>
+    <div *ngIf="frmGroup.get('email').errors?.email && frmGroup.get('email').touched">Email is invalid</div>
     <br><br>
     <input type="password" placeholder="password" formControlName="password">
     <br><br>
@@ -9,5 +11,6 @@
         <label for=""><input type="checkbox" formControlName="reactjs">Reactjs</label>
     </div>
     <br><br>
-    <button>Submit</button>
+    <button [disabled]="frmGroup.invalid">Submit</button>
+    {{ frmGroup.controls.email.errors | json }}
 </form>
