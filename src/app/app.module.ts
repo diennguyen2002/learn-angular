@@ -2,6 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule} from '@angular/router'
+
+const routesConfig: Routes = [
+  {path: 'contacts', component: ContactsComponent},
+  {path: 'detail', component: ContactDetailComponent},
+];
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +27,8 @@ import { RoundPipe } from './round.pipe';
 import { IpComponent } from './ip/ip.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
 @NgModule({
   declarations: [
@@ -40,14 +48,17 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     RoundPipe,
     IpComponent,
     FormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ContactsComponent,
+    ContactDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routesConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
