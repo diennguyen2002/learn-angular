@@ -19,6 +19,7 @@ import { CardComponent } from './card/card.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { RoundPipe } from './round.pipe';
 import { IpComponent } from './ip/ip.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { IpComponent } from './ip/ip.component';
     CardComponent,
     PipeComponent,
     RoundPipe,
-    IpComponent
+    IpComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -10,4 +10,4 @@ export class IpService {
         .toPromise()
         .then(res => res.ip);
     }
-}
+} 
