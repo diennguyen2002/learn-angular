@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl} from "@angular/forms"
+import { FormGroup, FormControl, FormBuilder } from "@angular/forms"
 
 @Component({
   selector: 'app-reactive-form',
@@ -8,22 +8,22 @@ import { FormGroup, FormControl} from "@angular/forms"
 })
 export class ReactiveFormComponent implements OnInit {
   frmGroup: FormGroup;
-  constructor() { 
-    this.frmGroup = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl(),
-      subjects: new FormGroup({
-        nodejs: new FormControl(),
-        angular: new FormControl(),
-        reactjs: new FormControl()
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.frmGroup = this.fb.group({
+      email: '',
+      password: '',
+      subjects: this.fb.group({
+        nodejs: false,
+        angular: false,
+        reactjs: false
       })
     });
   }
 
-  ngOnInit(): void {
-  }
-
-  onSubmit(){
+  onSubmit() {
     console.log(this.frmGroup.value);
   }
 
