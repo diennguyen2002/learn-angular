@@ -11,7 +11,7 @@ export class IpComponent implements OnInit {
   ip: string = '';
   constructor(private ipService: IpService) { 
     this.ipService.getIp()
-    .then(ip => this.ip = ip);
+    .then(data => this.ip = data.ip);
   }
 
   ngOnInit(): void {

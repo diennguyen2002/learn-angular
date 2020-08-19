@@ -8,6 +8,6 @@ export class IpService {
     getIp(){
         return this.http.get('http://ip.jsontest.com/')
         .toPromise()
-        .then(res => res.ip);
+        .then(res => res);
     }
 } 
