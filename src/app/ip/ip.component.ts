@@ -10,8 +10,8 @@ import { IpService } from "../ip.service";
 export class IpComponent implements OnInit {
   ip: string = '';
   constructor(private ipService: IpService) { 
-    this.ipService.getIp()
-    .then(data => this.ip = data.ip);
+    // this.ipService.getIp()
+    // .then(data => this.ip = data.ip);
   }
 
   ngOnInit(): void {
